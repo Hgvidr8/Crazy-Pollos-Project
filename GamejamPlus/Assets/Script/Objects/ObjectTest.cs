@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class ObjectTest : MonoBehaviour, IInteractable
+public class ObjectTest : MonoBehaviour, IObjectable
 {
     public Transform GetTransform()
     {
         return transform;
     }
 
-    public void Interact()
+    public bool IsFromDistance()
     {
-        
+        throw new System.NotImplementedException();
     }
 }

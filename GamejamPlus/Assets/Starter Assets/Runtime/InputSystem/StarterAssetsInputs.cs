@@ -10,6 +10,7 @@ namespace StarterAssets
 		[Header("Character Input Values")]
 		public Vector2 move;
 		public Vector2 look;
+		[SerializeField] float _mouseSens;
 		public bool jump;
 		public bool sprint;
 
@@ -21,27 +22,27 @@ namespace StarterAssets
 		public bool cursorInputForLook = true;
 
 #if ENABLE_INPUT_SYSTEM
-		public void OnMove(InputValue value)
+		public void OnMove(InputAction.CallbackContext value)
 		{
-			MoveInput(value.Get<Vector2>());
+			MoveInput(value.ReadValue<Vector2>());
 		}
 
-		public void OnLook(InputValue value)
+		public void OnLook(InputAction.CallbackContext value)
 		{
 			if(cursorInputForLook)
 			{
-				LookInput(value.Get<Vector2>());
+				LookInput(value.ReadValue<Vector2>());
 			}
 		}
 
-		public void OnJump(InputValue value)
+		public void OnJump(InputAction.CallbackContext value)
 		{
-			JumpInput(value.isPressed);
+			JumpInput(value.performed);
 		}
 
-		public void OnSprint(InputValue value)
+		public void OnSprint(InputAction.CallbackContext value)
 		{
-			SprintInput(value.isPressed);
+			SprintInput(value.performed);
 		}
 #endif
 
@@ -53,7 +54,7 @@ namespace StarterAssets
 
 		public void LookInput(Vector2 newLookDirection)
 		{
-			look = newLookDirection;
+			look = new Vector2(newLookDirection.x, -newLookDirection.y) * _mouseSens;
 		}
 
 		public void JumpInput(bool newJumpState)
