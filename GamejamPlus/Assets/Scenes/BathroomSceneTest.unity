@@ -5724,7 +5724,7 @@ PrefabInstance:
     - target: {fileID: -7635826562936255635, guid: 1aa0c6aecc31cf44aa394b91420fe1c2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 9c717e51d3ebac94da7b529f5db44603, type: 2}
+      objectReference: {fileID: 2100000, guid: db007ac2c79b37a40b6ca113cf54eae2, type: 2}
     - target: {fileID: 919132149155446097, guid: 1aa0c6aecc31cf44aa394b91420fe1c2, type: 3}
       propertyPath: m_Name
       value: toiletseat5re
@@ -5969,7 +5969,7 @@ PrefabInstance:
     - target: {fileID: -7635826562936255635, guid: d17b39ec3d8c8fa418f99b8bd5dbe167, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: bceacfc7d04c01a47ac1e0063a292316, type: 2}
+      objectReference: {fileID: 2100000, guid: 3db983dd9f94e24438cccd2a2f42a4b5, type: 2}
     - target: {fileID: 919132149155446097, guid: d17b39ec3d8c8fa418f99b8bd5dbe167, type: 3}
       propertyPath: m_Name
       value: bathroom_sink (1)
@@ -18945,7 +18945,7 @@ PrefabInstance:
     - target: {fileID: -7635826562936255635, guid: 1aa0c6aecc31cf44aa394b91420fe1c2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 9c717e51d3ebac94da7b529f5db44603, type: 2}
+      objectReference: {fileID: 2100000, guid: db007ac2c79b37a40b6ca113cf54eae2, type: 2}
     - target: {fileID: 919132149155446097, guid: 1aa0c6aecc31cf44aa394b91420fe1c2, type: 3}
       propertyPath: m_Name
       value: toiletseat5re (5)
@@ -20082,7 +20082,7 @@ PrefabInstance:
     - target: {fileID: -7635826562936255635, guid: 1aa0c6aecc31cf44aa394b91420fe1c2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 9c717e51d3ebac94da7b529f5db44603, type: 2}
+      objectReference: {fileID: 2100000, guid: db007ac2c79b37a40b6ca113cf54eae2, type: 2}
     - target: {fileID: 919132149155446097, guid: 1aa0c6aecc31cf44aa394b91420fe1c2, type: 3}
       propertyPath: m_Name
       value: toiletseat5re (1)
@@ -21041,7 +21041,7 @@ PrefabInstance:
     - target: {fileID: -7635826562936255635, guid: d17b39ec3d8c8fa418f99b8bd5dbe167, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: bceacfc7d04c01a47ac1e0063a292316, type: 2}
+      objectReference: {fileID: 2100000, guid: 3db983dd9f94e24438cccd2a2f42a4b5, type: 2}
     - target: {fileID: 919132149155446097, guid: d17b39ec3d8c8fa418f99b8bd5dbe167, type: 3}
       propertyPath: m_Name
       value: bathroom_sink (3)
@@ -28519,7 +28519,7 @@ PrefabInstance:
     - target: {fileID: -7635826562936255635, guid: d17b39ec3d8c8fa418f99b8bd5dbe167, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: bceacfc7d04c01a47ac1e0063a292316, type: 2}
+      objectReference: {fileID: 2100000, guid: 3db983dd9f94e24438cccd2a2f42a4b5, type: 2}
     - target: {fileID: 919132149155446097, guid: d17b39ec3d8c8fa418f99b8bd5dbe167, type: 3}
       propertyPath: m_Name
       value: bathroom_sink (2)
