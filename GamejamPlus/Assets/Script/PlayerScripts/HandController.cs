@@ -12,6 +12,10 @@ public class HandController : MonoBehaviour
     private void FixedUpdate()
     {
         HandCast(out _object);
+        if(_object == null)
+        {
+            return;
+        }
         print(_object.GetTransform().name);
     }
     void HandCast(out IObjectable _object)
