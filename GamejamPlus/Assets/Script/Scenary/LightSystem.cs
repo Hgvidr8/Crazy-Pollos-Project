@@ -6,7 +6,6 @@ public class LightSystem : MonoBehaviour
     [SerializeField] Light[] _light;
     [SerializeField] float _lightSpeed;
     float _evaluatedGradient;
-
     private void FixedUpdate()
     {
         if(_evaluatedGradient > 1f)
