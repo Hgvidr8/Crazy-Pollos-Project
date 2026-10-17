@@ -2,15 +2,23 @@ using UnityEngine;
 
 public class LightSystem : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] Gradient _gradient;
+    [SerializeField] Light[] _light;
+    [SerializeField] float _lightSpeed;
+    float _evaluatedGradient;
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
+        if(_evaluatedGradient > 1f)
+        {
+            _evaluatedGradient = 0f;
+        }
+        _evaluatedGradient += Time.fixedDeltaTime * _lightSpeed;
         
+        for (int i = 0; i < _light.Length; i++)
+        {
+            _light[i].color = _gradient.Evaluate(_evaluatedGradient);
+
+        }
     }
 }
