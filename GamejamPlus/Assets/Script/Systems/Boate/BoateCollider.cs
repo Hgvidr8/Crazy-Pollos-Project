@@ -4,9 +4,8 @@ using UnityEngine.InputSystem;
 
 public class BoateCollider : MonoBehaviour
 {
-    
-
     public PlayerInput input;
+    public CharacterController characterController;
     public Transform playerTransform;
     [SerializeField]Transform startPoint;
 
@@ -18,7 +17,7 @@ public class BoateCollider : MonoBehaviour
 
         foreach (var action in input.actions)
         {
-            if (action.WasPressedThisFrame())
+            if (action.WasPerformedThisFrame())
             {
                 ChangePlayerPosition();
                 break;
@@ -30,7 +29,10 @@ public class BoateCollider : MonoBehaviour
     {
         Debug.Log("cHANGE POS ");
 
+        characterController.enabled = false;
         playerTransform.position = startPoint.position;
         playerTransform.rotation = startPoint.rotation;
+        characterController.enabled = true;
+
     }
 }
