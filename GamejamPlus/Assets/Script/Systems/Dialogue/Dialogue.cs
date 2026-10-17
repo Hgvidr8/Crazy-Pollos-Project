@@ -18,4 +18,9 @@ public class Dialogue : MonoBehaviour, IInteractable
     {
        
     }
+
+    public Transform GetTransform()
+    {
+        return gameObject.transform;
+    }
 }
