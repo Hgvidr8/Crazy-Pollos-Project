@@ -26,7 +26,7 @@ public class HandController : MonoBehaviour
         {
             return;
         }
-        _point.position = Vector3.Lerp(_point.position, _interactable.GetTransform().position, .25f); 
+        //_point.position = Vector3.Lerp(_point.position, _interactable.GetTransform().position, .25f); 
 
         _knot[0].Position = _point.position;
         _knot[1].Position = new Vector3((_point.position.x + _cameraTransform.position.x)/ 2, 0f, (_point.position.z + _cameraTransform.position.z)/2);
@@ -41,7 +41,7 @@ public class HandController : MonoBehaviour
         if (context.performed && _interactable != null)
         {
             _interactable.Interact();
-            _interactable.GetTransform().transform.position = _point.position;
+            //_interactable.GetTransform().transform.position = _point.position;
         }
     }
     IInteractable GetInteractable()
