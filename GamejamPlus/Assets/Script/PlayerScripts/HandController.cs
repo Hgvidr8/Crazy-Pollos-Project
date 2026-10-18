@@ -38,4 +38,18 @@ public class HandController : MonoBehaviour
         _objectOverride = null;
         _handPos = _referencePoint.position;
     }
+    public void Interact(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (_object.IsFromDistance())
+            {
+                _object.GetTransform().SetParent(_handObj);
+                if (_object.GetTransform().TryGetComponent(out IInteractable _interactable))
+                {
+                    _interactable.Interact();
+                }
+            }
+        }
+    }
 }
