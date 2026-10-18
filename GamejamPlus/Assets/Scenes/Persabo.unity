@@ -713,7 +713,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00012207, y: -193.53061}
+  m_AnchoredPosition: {x: -0.00012207031, y: -193.53061}
   m_SizeDelta: {x: 0.00024414, y: -387.0548}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &633230867
@@ -1425,11 +1425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e78cfc2f7043d7a459e46010c8e41e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  _name: Persabo
-  sentences:
-  - oi sou persabo
-  - AAAAAAAAAAAAAAAAAAAAAAASDDDDDDDDDDDDDDDDDDDDDDDDASDFF
-  - tchau
+  data: {fileID: 11400000, guid: 98174b8c4bf9e0644ad058ebe4475610, type: 2}
 --- !u!1 &1666676675
 GameObject:
   m_ObjectHideFlags: 0

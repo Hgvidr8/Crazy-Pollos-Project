@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Dialogue : MonoBehaviour, IInteractable
 {
-    DialogueData data;
+    [SerializeField] DialogueData data;
     string _name;
     string[] sentences;
 
