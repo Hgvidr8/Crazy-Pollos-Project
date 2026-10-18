@@ -21,7 +21,7 @@ public class StretchingHand : Hand
                 if (Physics.Raycast(HandController.instance._cameraTransform.position, HandController.instance._cameraTransform.forward, out _hit, HandController.instance._maxDistance))
                 {
                     HandController.instance._canAdjustHand = false;
-                    HandController.instance._handObj.DOMove(_hit.point += _hit.normal, .25f).OnComplete(Complete);
+                    HandController.instance._handObj.DOMove(_hit.point += _hit.normal / 2, .25f).OnComplete(Complete);
                     return;
                 }
             }
