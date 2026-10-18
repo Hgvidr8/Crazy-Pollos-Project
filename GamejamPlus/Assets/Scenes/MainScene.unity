@@ -18514,7 +18514,7 @@ Canvas:
   m_GameObject: {fileID: 718238392}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 5126527961534396764}
   m_PlaneDistance: 3
   m_PixelPerfect: 0
@@ -68212,6 +68212,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7685886780939463344}
+        m_TargetAssemblyTypeName: ChangeHand, Assembly-CSharp
+        m_MethodName: SetHand
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a6e78383-6f55-47f8-877b-b7062167dd79
+    m_ActionName: 'Player/Hand[/Keyboard/0,/Keyboard/1,/Keyboard/2]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -68288,6 +68304,7 @@ GameObject:
   - component: {fileID: 7685886780939463341}
   - component: {fileID: 7685886780939463342}
   - component: {fileID: 7685886780939463343}
+  - component: {fileID: 7685886780939463344}
   m_Layer: 3
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -68857,7 +68874,6 @@ MonoBehaviour:
   _referencePoint: {fileID: 587457919}
   _cameraTransform: {fileID: 5126527961534396763}
   _handObj: {fileID: 1535411059}
-  _maxDistance: 35
   _hand: {fileID: 7685886780939463343}
   _isHolding: 0
   _canAdjustHand: 1
@@ -68876,7 +68892,7 @@ MonoBehaviour:
   OnHand:
     m_PersistentCalls:
       m_Calls: []
-  _maxDistance: 0
+  _maxDistance: 35
 --- !u!114 &7685886780939463343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68892,7 +68908,22 @@ MonoBehaviour:
   OnHand:
     m_PersistentCalls:
       m_Calls: []
-  _maxDistance: 0
+  _maxDistance: 5
+--- !u!114 &7685886780939463344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453084650437312604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e123fbc5d86bc4fa6acefda18a8177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeHand
+  _hands:
+  - {fileID: 7685886780939463342}
+  - {fileID: 7685886780939463343}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

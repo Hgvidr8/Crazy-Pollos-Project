@@ -12,7 +12,6 @@ public class HandController : MonoBehaviour
     public Transform _referencePoint;
     public Transform _cameraTransform;
     public Transform _handObj;
-    public float _maxDistance;
     public Hand _hand;
     public bool _isHolding;
     public bool _canAdjustHand = true;
@@ -30,7 +29,7 @@ public class HandController : MonoBehaviour
     void HandCast(out IObjectable _objectOverride, out Vector3 _handPos)
     {
         RaycastHit _hit;
-        if(Physics.Raycast(_cameraTransform.position, _cameraTransform.forward,out _hit, _maxDistance))
+        if(Physics.Raycast(_cameraTransform.position, _cameraTransform.forward,out _hit, _hand.GetMaxDistance()))
         {
             if(_hit.collider.TryGetComponent(out IObjectable _objectable))
             {
@@ -41,7 +40,6 @@ public class HandController : MonoBehaviour
                     return;
                 }
             }
-            Debug.DrawRay(_cameraTransform.position, _cameraTransform.forward * _maxDistance, Color.yellow, 0f);
         }
         _objectOverride = null;
         _handPos = _referencePoint.position;

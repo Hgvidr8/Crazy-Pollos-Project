@@ -1,16 +1,12 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ChangeHand : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] Hand[] _hands;
+    public void SetHand(InputAction.CallbackContext context)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        char[] _gotChar = context.control.displayName.ToCharArray();
+        HandController.instance._hand = _hands[_gotChar[_gotChar.Length - 1] - 49];
     }
 }
