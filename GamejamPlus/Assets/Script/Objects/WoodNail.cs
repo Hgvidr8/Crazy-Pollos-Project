@@ -14,7 +14,7 @@ public class WoodNail : MonoBehaviour
         if(_nailIndex >= 4)
         {
             ObjectTest _objTest = gameObject.AddComponent<ObjectTest>();
-            _objTest.
+            _objTest.SetInteractable(true);
             OnNailsOut.Invoke();
         }
     }
