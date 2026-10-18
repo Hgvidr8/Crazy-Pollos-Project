@@ -13,7 +13,8 @@ public class WoodNail : MonoBehaviour
     {
         if(_nailIndex >= 4)
         {
-            gameObject.AddComponent<ObjectTest>();
+            ObjectTest _objTest = gameObject.AddComponent<ObjectTest>();
+            _objTest.
             OnNailsOut.Invoke();
         }
     }
