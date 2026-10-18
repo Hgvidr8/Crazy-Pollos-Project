@@ -19,4 +19,9 @@ public class ObjectTest : MonoBehaviour, IObjectable, IInteractable
     {
         return _interactable;
     }
+
+    public void SetInteractable(bool _setInteractable)
+    {
+        _interactable = _setInteractable;
+    }
 }
