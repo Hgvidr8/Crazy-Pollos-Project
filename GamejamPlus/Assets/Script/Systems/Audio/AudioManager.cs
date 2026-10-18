@@ -38,7 +38,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        Play("Cena1Intro");
+        Play("Cena3Tran");
     }
 
     public void Play(string name) 
@@ -59,7 +59,7 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
         Debug.Log("Playing: " + s.soundName);
 
-        yield return new WaitForSeconds(s.soundClip.length);
+        yield return new WaitForSeconds(s.soundClip.length-0.1f);
         Sound nextSound = Array.Find(sounds, sounds => sounds.soundName == s.sequenceName);
         if (nextSound != null)
         {

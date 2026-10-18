@@ -35,8 +35,8 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
     canLoop: 0
-    hasSequence: 0
-    sequenceName: 
+    hasSequence: 1
+    sequenceName: Cena3Loop
   - soundName: Cena2Loop
     soundClip: {fileID: 8300000, guid: d879196c5ccb6d147823b4d032022bf5, type: 3}
     volume: 0.4
@@ -51,8 +51,8 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
     canLoop: 0
-    hasSequence: 0
-    sequenceName: 
+    hasSequence: 1
+    sequenceName: Cena4Loop
   - soundName: Cena3Loop
     soundClip: {fileID: 8300000, guid: ca41ff193fb002a43bf4a7fe3a1a1f3d, type: 3}
     volume: 0.4
@@ -75,5 +75,5 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
     canLoop: 0
-    hasSequence: 0
-    sequenceName: 
+    hasSequence: 1
+    sequenceName: Cena2Loop
