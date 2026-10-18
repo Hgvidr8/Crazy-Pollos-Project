@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -37,13 +38,35 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        //Play("Cena1Loop");
+        Play("Cena1Intro");
     }
 
     public void Play(string name) 
     { 
        Sound s = Array.Find(sounds,sounds => sounds.soundName == name);
-       s.source.Play();
+        if (s.hasSequence) 
+        { 
+            StartCoroutine(PlaySequence(s));
+            return;
+        }
+        s.source.Play();
+        Debug.Log("Playing: " + s.soundName);
+
+    }
+
+    IEnumerator PlaySequence(Sound s)
+    {
+        s.source.Play();
+        Debug.Log("Playing: " + s.soundName);
+
+        yield return new WaitForSeconds(s.soundClip.length);
+        Sound nextSound = Array.Find(sounds, sounds => sounds.soundName == s.sequenceName);
+        if (nextSound != null)
+        {
+            nextSound.source.Play();
+            Debug.Log("Playing: " + nextSound.soundName);
+
+        }
     }
 
     public void StopAll() 

@@ -18,4 +18,6 @@ public class Sound
     public AudioSource source;
 
     public bool canLoop;
+    public bool hasSequence;
+    public string sequenceName;
 }
