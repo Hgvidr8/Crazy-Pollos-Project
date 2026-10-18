@@ -13,21 +13,51 @@ MonoBehaviour:
   m_Name: AudioData
   m_EditorClassIdentifier: Assembly-CSharp::AudioData
   Sounds:
-  - soundName: 
-    soundClip: {fileID: 0}
-    volume: 0
+  - soundName: Cena1Intro
+    soundClip: {fileID: 8300000, guid: cb04533cec0489440ad124a17449cf7a, type: 3}
+    volume: 1
     pitch: 0
     source: {fileID: 0}
     canLoop: 0
-  - soundName: 
-    soundClip: {fileID: 0}
-    volume: 0
+  - soundName: Cena1Loop
+    soundClip: {fileID: 8300000, guid: 78200e783a5a27049b46eccc2945e37f, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+    canLoop: 1
+  - soundName: Cena2Tran
+    soundClip: {fileID: 8300000, guid: ac9210fa4c4669c419e622bb7f05732b, type: 3}
+    volume: 1
     pitch: 0
     source: {fileID: 0}
     canLoop: 0
-  - soundName: 
-    soundClip: {fileID: 0}
-    volume: 0
+  - soundName: Cena2Loop
+    soundClip: {fileID: 8300000, guid: d879196c5ccb6d147823b4d032022bf5, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+    canLoop: 1
+  - soundName: Cena3Tran
+    soundClip: {fileID: 8300000, guid: 1050bd7e62ac09d418b3c8c12932ce73, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+    canLoop: 0
+  - soundName: Cena3Loop
+    soundClip: {fileID: 8300000, guid: ca41ff193fb002a43bf4a7fe3a1a1f3d, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+    canLoop: 1
+  - soundName: Cena4Loop
+    soundClip: {fileID: 8300000, guid: e5fb15da1f5f4194cb7c8262c8b1bec2, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+    canLoop: 1
+  - soundName: Cena1Tran
+    soundClip: {fileID: 8300000, guid: b7bf01893ec62db40a4207f9ca60503d, type: 3}
+    volume: 1
     pitch: 0
     source: {fileID: 0}
     canLoop: 0
