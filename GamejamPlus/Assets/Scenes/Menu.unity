@@ -58988,7 +58988,7 @@ MonoBehaviour:
   volumeB: {fileID: 892452304}
   volumeC: {fileID: 856825518}
   firstFadeDuration: 3
-  delay: 0.5
+  delay: -2
   secondFadeDuration: 3
 --- !u!1 &537921905
 GameObject:
