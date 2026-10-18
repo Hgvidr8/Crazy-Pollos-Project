@@ -184,12 +184,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Hand"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""a6e78383-6f55-47f8-877b-b7062167dd79"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false,
+                    ""initialStateCheck"": true,
                     ""priority"": 0
                 }
             ],
@@ -580,37 +580,37 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""3c89ca02-fdbd-4f66-8c8e-d1c7f370c686"",
-                    ""path"": ""<Keyboard>/1"",
+                    ""name"": ""2D Vector"",
+                    ""id"": ""525d50ce-b51d-448f-8ca4-26644953c530"",
+                    ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Hand"",
-                    ""isComposite"": false,
+                    ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""1248df65-3c0a-4942-917b-173da20205bd"",
-                    ""path"": ""<Keyboard>/2"",
+                    ""name"": ""up"",
+                    ""id"": ""651a3706-163f-415f-9c80-5c4285d9d95f"",
+                    ""path"": ""<Mouse>/scroll/up"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""Hand"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""8c2c61cc-ef0f-4e65-bc0b-e89ca61a52ca"",
-                    ""path"": ""<Keyboard>/3"",
+                    ""name"": ""down"",
+                    ""id"": ""4012c195-5267-4bd9-af21-7a8a4338540f"",
+                    ""path"": ""<Mouse>/scroll/down"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""Hand"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 }
             ]
         },

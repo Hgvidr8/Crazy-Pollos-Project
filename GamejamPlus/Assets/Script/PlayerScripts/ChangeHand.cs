@@ -4,9 +4,19 @@ using UnityEngine.InputSystem;
 public class ChangeHand : MonoBehaviour
 {
     [SerializeField] Hand[] _hands;
-    public void SetHand(InputAction.CallbackContext context)
+    int _axis;
+    public void SetHand(InputAction.CallbackContext value)
     {
-        char[] _gotChar = context.control.displayName.ToCharArray();
-        HandController.instance._hand = _hands[_gotChar[_gotChar.Length - 1] - 49];
+        _axis += (int)value.ReadValue<Vector2>().y;
+
+        if (_axis <= 0)
+        {
+            _axis = 0;
+        }
+        if(_axis >= _hands.Length - 1)
+        {
+            _axis = _hands.Length - 1;
+        }
+        HandController.instance._hand = _hands[_axis];
     }
 }
