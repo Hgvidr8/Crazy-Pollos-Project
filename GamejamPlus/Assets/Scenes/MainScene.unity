@@ -36897,6 +36897,7 @@ GameObject:
   - component: {fileID: 4244626405233089568}
   - component: {fileID: 453084650437312592}
   - component: {fileID: 7685886780939463341}
+  - component: {fileID: 7685886780939463342}
   m_Layer: 3
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -37476,6 +37477,36 @@ MonoBehaviour:
   _cameraTransform: {fileID: 5126527961534396763}
   _handObj: {fileID: 1535411059}
   _maxDistance: 35
+  _hand: {fileID: 7685886780939463342}
+  _isHolding: 0
+  _canAdjustHand: 1
+--- !u!114 &7685886780939463342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453084650437312604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58bc2de494c3b7c4fba96e9efebfa37c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StretchingHand
+  OnHand:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7685886780939463341}
+        m_TargetAssemblyTypeName: HandController, Assembly-CSharp
+        m_MethodName: Complete
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

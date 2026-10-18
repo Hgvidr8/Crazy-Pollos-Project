@@ -6,14 +6,21 @@ using UnityEngine.Splines;
 
 public class HandController : MonoBehaviour
 {
-    [SerializeField] IObjectable _object;
-    [SerializeField] Transform _referencePoint;
-    [SerializeField] Transform _cameraTransform;
-    [SerializeField] Transform _handObj;
-    [SerializeField] float _maxDistance;
-    bool _isHolding;
-    bool _canAdjustHand = true;
+    public static HandController instance;
+
+    public IObjectable _object;
+    public Transform _referencePoint;
+    public Transform _cameraTransform;
+    public Transform _handObj;
+    public float _maxDistance;
+    public Hand _hand;
+    public bool _isHolding;
+    public bool _canAdjustHand = true;
     Vector3 _handPositionOnObj;
+    private void Awake()
+    {
+        instance = this;
+    }
     private void FixedUpdate()
     {
         HandCast(out _object, out _handPositionOnObj);
@@ -41,50 +48,6 @@ public class HandController : MonoBehaviour
     }
     public void Interact(InputAction.CallbackContext context)
     {
-        if (context.phase.IsInProgress())
-        {
-            if (_isHolding)
-            {
-                if(_handObj.GetChild(0).TryGetComponent(out IObjectable _interactable))
-                {
-                    if (!_interactable.IsFromDistance())
-                    {
-                        return;
-                    }
-                }
-                RaycastHit _hit;
-                if(Physics.Raycast(_cameraTransform.position, _cameraTransform.forward, out _hit, _maxDistance))
-                {
-                    _canAdjustHand = false;
-                    _handObj.DOMove(_hit.point, .25f).OnComplete(Complete);
-                    return;
-                }
-            }
-
-            if (_object.IsFromDistance())
-            {
-                _object.GetTransform().SetParent(_handObj);
-                _canAdjustHand = false;
-                _handObj.DOMove(_referencePoint.position, .25f).OnComplete(() => _canAdjustHand = true);
-                if (_object.GetTransform().TryGetComponent(out IInteractable _interactable))
-                {
-                    _isHolding = true;
-                    _interactable.Interact();
-                }
-            }
-            else
-            {
-                if (_object.GetTransform().TryGetComponent(out IInteractable _interactable))
-                {
-                    _interactable.Interact();
-                }
-            }
-        }
-    }
-    void Complete()
-    {
-        _handObj.GetChild(0).SetParent(null);
-        _isHolding = false;
-        _canAdjustHand = true;
+        _hand.Interact(context);
     }
 }
