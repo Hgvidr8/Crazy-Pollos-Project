@@ -50,6 +50,13 @@ public class HandController : MonoBehaviour
                     _interactable.Interact();
                 }
             }
+            else
+            {
+                if (_object.GetTransform().TryGetComponent(out IInteractable _interactable))
+                {
+                    _interactable.Interact();
+                }
+            }
         }
     }
 }
