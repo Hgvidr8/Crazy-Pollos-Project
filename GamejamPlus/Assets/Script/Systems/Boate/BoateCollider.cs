@@ -4,35 +4,74 @@ using UnityEngine.InputSystem;
 
 public class BoateCollider : MonoBehaviour
 {
-    public PlayerInput input;
-    public CharacterController characterController;
-    public Transform playerTransform;
-    [SerializeField]Transform startPoint;
+    [Header("Referências")]
+    [SerializeField] private Transform player;
+    [SerializeField] private Transform startPoint;
+    [SerializeField] private CharacterController characterController;
 
+    [Header("Configurações")]
+    [SerializeField] private float checkInterval = 0.1f;
+    [SerializeField] private float maxDistance = 10f;
+
+    private Vector3 savedPosition;
+    private float timer;
+
+    private bool isChecking = false;
 
     private void Update()
     {
-        Debug.Log("BoateCollider Update called");
-        if (input == null) return;
+        if (!isChecking)
+            return;
 
-        foreach (var action in input.actions)
+        timer += Time.deltaTime;
+
+        if (timer >= checkInterval)
         {
-            if (action.WasPerformedThisFrame())
-            {
-                ChangePlayerPosition();
-                break;
-            }
+            //timer = 0f;
+            CheckPlayerPosition();
         }
     }
 
-    void ChangePlayerPosition()
+    public void StartChecking()
     {
-        Debug.Log("cHANGE POS ");
+        savedPosition = player.position;
+        timer = 0f;
+        isChecking = true;
+    }
 
-        characterController.enabled = false;
-        playerTransform.position = startPoint.position;
-        playerTransform.rotation = startPoint.rotation;
-        characterController.enabled = true;
+    public void StopChecking()
+    {
+        isChecking = false;
+        savedPosition = Vector3.zero;
+        timer = 0f;
+    }
 
+    private void CheckPlayerPosition()
+    {
+        float distance = Vector3.Distance(
+            savedPosition,
+            player.position
+        );
+
+        if (distance >= maxDistance)
+        {
+            TeleportPlayer();
+        }
+    }
+
+    private void TeleportPlayer()
+    {
+        if (characterController != null)
+        {
+            characterController.enabled = false;
+            player.position = startPoint.position;
+            characterController.enabled = true;
+        }
+        else
+        {
+            player.position = startPoint.position;
+        }
+
+        savedPosition = player.position;
     }
 }

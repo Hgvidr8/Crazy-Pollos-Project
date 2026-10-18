@@ -894,10 +894,10 @@ MonoBehaviour:
           m_StringArgument: DANSOU
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 829005214}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 829005217}
+        m_TargetAssemblyTypeName: BoateCollider, Assembly-CSharp
+        m_MethodName: StopChecking
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -921,10 +921,10 @@ MonoBehaviour:
           m_StringArgument: PARO
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 829005214}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 829005217}
+        m_TargetAssemblyTypeName: BoateCollider, Assembly-CSharp
+        m_MethodName: StartChecking
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -988,7 +988,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 829005216}
-  - component: {fileID: 829005215}
   - component: {fileID: 829005217}
   m_Layer: 0
   m_Name: Colindo
@@ -996,28 +995,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!65 &829005215
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829005214}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_IsActive: 1
 --- !u!4 &829005216
 Transform:
   m_ObjectHideFlags: 0
@@ -1045,10 +1023,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c03cbc3a5dcf1f4cbb0e198d23d00fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoateCollider
-  input: {fileID: 2910526965898325706}
-  characterController: {fileID: 3236119570887941509}
-  playerTransform: {fileID: 919218987002786182}
+  player: {fileID: 919218987002786182}
   startPoint: {fileID: 1666676679}
+  characterController: {fileID: 3236119570887941509}
+  checkInterval: 0.1
+  maxDistance: 1
 --- !u!1 &1052287557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,9 +1422,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1490342587}
-        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-        m_MethodName: Interact
+      - m_Target: {fileID: 675019696}
+        m_TargetAssemblyTypeName: BoateMinigame, Assembly-CSharp
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2433,6 +2412,9 @@ MonoBehaviour:
   _cameraTransform: {fileID: 4587002819890377286}
   _handObj: {fileID: 0}
   _maxDistance: 35
+  _hand: {fileID: 0}
+  _isHolding: 0
+  _canAdjustHand: 1
 --- !u!33 &4365061865189210435
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2507,8 +2489,8 @@ MonoBehaviour:
   jump: 0
   sprint: 0
   analogMovement: 0
-  cursorLocked: 1
-  cursorInputForLook: 1
+  cursorLocked: 0
+  cursorInputForLook: 0
 --- !u!1 &5321983045660325509
 GameObject:
   m_ObjectHideFlags: 0
