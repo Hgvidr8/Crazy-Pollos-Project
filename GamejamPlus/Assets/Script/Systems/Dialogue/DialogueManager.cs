@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
 
     bool IsDialogueActive => InternalDialogue != null;
 
+    [SerializeField] GameObject dialoguePanel;
     [SerializeField] TMP_Text nameText;
     [SerializeField] TMP_Text dialogueText;
 
@@ -24,12 +25,13 @@ public class DialogueManager : MonoBehaviour
             Destroy(this);
         }
     }
-    void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue)
     {
         nameText.text = dialogue.GetName();
         dialogueText.text = dialogue.GetSentences()[0];
 
         InternalDialogue = dialogue;
+        dialoguePanel.SetActive(true);
     }
 
     public void NextDialogue() 
@@ -49,5 +51,6 @@ public class DialogueManager : MonoBehaviour
         currentSentenceIndex = 0;
         nameText.text = "";
         dialogueText.text = "";
+        dialoguePanel.SetActive(false);
     }
 }

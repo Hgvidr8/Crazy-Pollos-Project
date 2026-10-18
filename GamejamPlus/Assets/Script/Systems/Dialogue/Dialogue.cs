@@ -2,9 +2,16 @@ using UnityEngine;
 
 public class Dialogue : MonoBehaviour, IInteractable
 {
-    [SerializeField] string _name;
-    [SerializeField] string[] sentences;
-    
+    DialogueData data;
+    string _name;
+    string[] sentences;
+
+    private void Start()
+    {
+        _name = data.GetName();
+        sentences = data.GetSentences();
+    }
+
     public string GetName()
     {
         return _name;
@@ -16,7 +23,7 @@ public class Dialogue : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-       
+       DialogueManager.Instance.StartDialogue(this);
     }
 
     public Transform GetTransform()
