@@ -11,6 +11,15 @@ public class BoateMinigame : MonoBehaviour
         StartCoroutine(StartGameCoroutine());
     }
 
+    public void PlayAudio(string audioName)
+    {
+        AudioManager.instance.Play(audioName);
+    }
+    public void StopAudio(string audioName)
+    {
+        AudioManager.instance.Stop(audioName);
+    }
+
     public IEnumerator StartGameCoroutine()
     {
         //começa o ciclo de pausar

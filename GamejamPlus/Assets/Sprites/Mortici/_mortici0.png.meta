@@ -48,10 +48,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 0
-  alignment: 0
+  spriteMeshType: 1
+  alignment: 7
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1755
   spriteBorder: {x: 1360, y: 825, z: 1360, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1

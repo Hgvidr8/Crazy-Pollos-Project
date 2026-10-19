@@ -39,6 +39,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         Play("Cena1Intro");
+        FadeManager.Instance.SetFadeIn("Cena1");
     }
 
     public void Play(string name) 
@@ -67,6 +68,12 @@ public class AudioManager : MonoBehaviour
             Debug.Log("Playing: " + nextSound.soundName);
 
         }
+    }
+
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, sounds => sounds.soundName == name);
+        s.source.Stop();
     }
 
     public void StopAll() 
