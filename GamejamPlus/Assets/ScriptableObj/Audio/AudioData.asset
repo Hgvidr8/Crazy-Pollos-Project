@@ -85,3 +85,11 @@ MonoBehaviour:
     canLoop: 0
     hasSequence: 0
     sequenceName: 
+  - soundName: Vomito
+    soundClip: {fileID: 8300000, guid: 0fc886a4c1eace942abbca54a3091e2a, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    canLoop: 0
+    hasSequence: 0
+    sequenceName: 
