@@ -69570,7 +69570,7 @@ MonoBehaviour:
   _hand: {fileID: 7685886780939463343}
   _isHolding: 0
   _canAdjustHand: 1
-  _meshRenderer: {fileID: 0}
+  _meshRenderer: {fileID: 1535411060}
 --- !u!114 &7685886780939463342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69583,7 +69583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58bc2de494c3b7c4fba96e9efebfa37c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StretchingHand
-  _handSpr: {fileID: 0}
+  _handSpr: {fileID: 2100000, guid: 1d2378423837a1643911e31a04d1e29b, type: 2}
   OnHand:
     m_PersistentCalls:
       m_Calls: []
@@ -69600,7 +69600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959e4bd5b905e154e811be4c1b143af1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandNailHammer
-  _handSpr: {fileID: 0}
+  _handSpr: {fileID: 2100000, guid: 9f40bc1f4f09cb746942cfbd4eb10418, type: 2}
   OnHand:
     m_PersistentCalls:
       m_Calls: []

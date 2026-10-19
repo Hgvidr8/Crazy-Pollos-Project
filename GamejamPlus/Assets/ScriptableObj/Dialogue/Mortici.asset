@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e727f34f8a1c094597a4e4bb831de0d, type: 3}
+  m_Name: Mortici
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  _name: Mortici
+  sentences:
+  - FINALLY YOU ARE HERE
+  - I was so worried you can't even imagine
+  - Sorry I don't know where your wallet is
+  - Changing the subject, you look sick as hell is everything ok?
+  - Hand streching? What? YOu look hella drunk let's go home
+  - Honestly this club is mid, not everything special about it
+  - Relax I didn't drink anything tonight, but there is a problem
+  - I putted in a crate but some random bouncer just disappeared with it
+  - I know you are sick but trust me I go out of here and get the car and we leave this place ASAP
+  - Don't forget Krisio, he's is also missing, last time i saw he was not so sick

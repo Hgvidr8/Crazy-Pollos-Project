@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e727f34f8a1c094597a4e4bb831de0d, type: 3}
+  m_Name: Krisio
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  _name: Krisio
+  sentences:
+  - Shit i thought I was bad HAHAHAH
+  - Bro you look HORRIBLE daaamn...
+  - Sorry sorry what you was saying?
+  - Wallet? OH RIGHT YOUR WALLET
+  - Bro i saw a wallet but you will be pissed
+  - Someone putted your wallet, somewhat somehow, INSIDE A ROOM, and putted planks
+  - I'm fascinated, it's lowkey crazy
+  - Oh Mortici is getting the car? Where is they? OUTSIDE RIGHT NOW?
+  - I WILL RUN THANKS SEE YOU THERE
