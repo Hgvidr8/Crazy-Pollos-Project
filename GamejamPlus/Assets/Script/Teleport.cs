@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private CharacterController characterController;
+    [SerializeField] private Transform player;
+    [SerializeField] private Transform teleportPoint;
+    private void TeleportPlayer()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (characterController != null)
+        {
+            characterController.enabled = false;
+            player.position = teleportPoint.position;
+            characterController.enabled = true;
+        }
+        else
+        {
+            player.position = teleportPoint.position;
+        }
     }
 }
