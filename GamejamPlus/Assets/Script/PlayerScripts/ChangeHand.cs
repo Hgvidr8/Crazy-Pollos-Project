@@ -18,6 +18,5 @@ public class ChangeHand : MonoBehaviour
             _axis = _hands.Length - 1;
         }
         HandController.instance._hand = _hands[_axis];
-        HandController.instance.SetMaterial(_hands[_axis]._handSpr);
     }
 }
