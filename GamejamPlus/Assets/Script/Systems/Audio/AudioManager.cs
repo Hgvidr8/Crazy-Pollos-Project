@@ -39,7 +39,6 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         Play("Cena1Intro");
-        FadeManager.Instance.SetFadeIn("Cena1");
     }
 
     public void Play(string name) 
