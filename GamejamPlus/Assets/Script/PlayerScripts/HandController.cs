@@ -15,6 +15,7 @@ public class HandController : MonoBehaviour
     public Hand _hand;
     public bool _isHolding;
     public bool _canAdjustHand = true;
+    public MeshRenderer _meshRenderer;
     Vector3 _handPositionOnObj;
     private void Awake()
     {
@@ -25,6 +26,10 @@ public class HandController : MonoBehaviour
         HandCast(out _object, out _handPositionOnObj);
         if(_canAdjustHand)
         _handObj.DOMove(_handPositionOnObj, .25f);
+    }
+    public void SetMaterial(Material _material)
+    {
+        _meshRenderer.material = _material;
     }
     void HandCast(out IObjectable _objectOverride, out Vector3 _handPos)
     {
